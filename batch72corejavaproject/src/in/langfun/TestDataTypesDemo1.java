@@ -50,11 +50,41 @@ public class TestDataTypesDemo1 {
 //	long l1 = 2147483648; //CE : The literal 2147483648 of type int is out of range 
 	long l1 = 9223372036854775807L;
 
-	float f;
-	double d;
+	float f = 10;// int --> float --> 10.0
+//	RHS Decimal points always double --> double cannot convert to float 
+//	float f1 = 5.5;//Type mismatch: cannot convert from double to float
+//	float range is 4 bytes, and after decimal point it can represent 5-6 Decimals only
+//	double range is 8 bytes, and after decimal point it can represent 10-15 Decimals.
+	float f2 = 567.59087643470798755f;
+	double d = 567.59087643470798755D;
 
-	char c;
-	boolean boo;
+	// In char Data Types, We can store
+//		- Single quote characters 
+//		- ASCII char values 
+//	    - Unicode values 
+
+	// Range of characters is 2 bytes = 16 bits --> 32768 + 32767 = 0 to 65535
+	char c = 'A';
+//	char c1 = 'AA';//Invalid character constant
+//	A = 65 B =66.....Z =90
+//	a = 97 b =98 .....z =122
+	char c2 = 6566;// ASCII character values
+	char c3 = '\u0040';
+
+	int i5 = 'A';// char can convert int --> int can convert to char
+
+	// boolean range is 1 bit either true or false
+	// true or false only Literals we can store it into boolean.
+	boolean boo = false;
+
+//	boolean boo1 = TRUE;
+//	boolean boo2 = FALSE;
+//	boolean boo3 = True;
+//	boolean boo4 = False;
+//	boolean boo5 = "true";
+//	boolean boo6 = "false";
+//	boolean boo7 = 0;
+//	boolean boo8 = 1;
 
 	public static void main(String[] args) {
 
@@ -71,16 +101,24 @@ public class TestDataTypesDemo1 {
 		System.out.println("int value : " + t.i);// 0
 		System.out.println("int value : " + t.i1);// 0
 //		System.out.println("int value : " + t.i2);// 0
+		System.out.println("int value : " + t.i5);// 0
 
 		System.out.println("lobng value : " + t.l);// 0
 		System.out.println("lobng value : " + t.l1);// 0
 //		System.out.println("lobng value : " + t.l2);// 0
 
 		System.out.println("float value : " + t.f);// 0.0
+		System.out.println("float value : " + t.f2);// 0.0
 		System.out.println("double value : " + t.d);// 0.0
 
 		System.out.println("char value : " + t.c);//
+		System.out.println("char value : " + t.c2);//
+		System.out.println("char value : " + t.c3);//
 		System.out.println("boolaean value : " + t.boo);// false
+
+		if (t.boo) {
+			System.out.println("Welcome to Java world !");
+		}
 
 		System.out.println("main method ended ");
 
