@@ -1,7 +1,8 @@
 package in.langfun;
 
-import java.math.BigInteger;
 import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Scanner;
 
 class Dog {
 
@@ -20,8 +21,14 @@ public class TestDataTypesDemo2 {
 	Double d1;
 
 	String s = "Srikanth ";
-//	BigInteger b1 = 200000;
-//	BigDecimal b2 = 500000.765;
+	String s1 = new String();
+
+	Scanner sc = new Scanner(System.in);
+	BigInteger b1 = new BigInteger("876545646545465456453545645674545");
+	BigInteger b2 = new BigInteger("876545646545465456453545645674545");
+	BigDecimal b3 = new BigDecimal("876546789076543567543567897654678976543567675435678976546789654.765432567843");
+
+//	TestDataTypesDemo2 t = new TestDataTypesDemo2();
 
 	Dog d;
 
@@ -36,6 +43,14 @@ public class TestDataTypesDemo2 {
 		System.out.println(t.s);// null
 //		System.out.println(t.b1);// not sure
 //		System.out.println(t.b2);// not sure
+
+		// The operator + is undefined for the argument type(s)
+//		java.math.BigInteger, java.math.BigInteger
+//		System.out.println(t.b1+t.b2);
+
+		System.out.println(t.b1.add(t.b2));
+		System.out.println(t.b1.multiply(t.b2));
+		System.out.println(t.b1.subtract(new BigInteger("10")));
 
 		System.out.println(t.d);// space null not sure
 
