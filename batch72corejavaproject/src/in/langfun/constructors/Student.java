@@ -1,12 +1,17 @@
 package in.langfun.constructors;
 
+//Q) If we have instance blocks then why we need to create no arg constructor .? 
+
 //Q) Sir, If we have Default constructor then why we need No arg constructor ..? 
 //Ans: Here we have two answers.
-// i) Instead of JVM provided default values, 
-//if we want to provide the values explicitly for instance data 
-//when we create an Object.
+// i) Instead of JVM provided default values, if we want to provide the values explicitly 
+//for instance data when we created an object.
 
-// ii) 
+// ii) Whenever a program consist of explicit parameterized constructors, 
+//still we want to create Object without sending any values
+//then Java Compiler will not create any default constructor So we must need to create no arg constructor.
+
+//Note : If we have any other constructors, Java compiler will not create default constructor.
 public class Student {
 
 	int sid;
@@ -24,7 +29,7 @@ public class Student {
 
 //		i) Creating an Object with the help of Default Constructor.
 //		In a Program, If there are no explicit constructors, 
-//		then Java Compiler will create default constructors.
+//		then only Java Compiler will create default constructors.
 
 //		ii) Object is created with the help of no arg constructor when we have explicit no arg constructor.
 		Student s = new Student();
