@@ -24,7 +24,7 @@ public class TestUnaryOpDemo2 {
 		System.out.println("B value : " + b);//7 --> 6  
 		//17+ 20 
 		System.out.println(++a + b-- + a++ + --a);
-//		System.out.println(++a + b-- + a++ + --a + a++ + --b + ++b);
+		System.out.println(++a + b-- + a++ + --a + a++ + --b + ++b);//59
 
 	}
 
