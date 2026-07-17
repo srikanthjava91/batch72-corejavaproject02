@@ -2,14 +2,15 @@ package com.oops.inheritance;
 
 import java.util.Scanner;
 
-public class LoanImpl {
+//Parent-class or Super-Class or Base-Class
+public class LoanImpl implements Loan {
 
 	static Scanner sc = new Scanner(System.in);
 
-	String getAddressDetails() {
+	@Override
+	public String getAddressDetails() {
 
 		String address = "";
-
 		System.out.println("Enter flat number: ");
 		String flat = sc.next();
 
@@ -33,14 +34,16 @@ public class LoanImpl {
 		return address;
 	}
 
-	boolean isPhoneValid() {
+	@Override
+	public boolean isPhoneValid() {
 		System.out.println("Enter your phone number : ");
 		String phone = sc.next();
 		boolean isPhoneValid = phone.matches("[6-9][0-9]{9}");
 		return isPhoneValid;
 	}
 
-	boolean isAadharValid() {
+	@Override
+	public boolean isAadharValid() {
 		System.out.println("Enter your Aadhar number : ");
 		String aadhar = sc.next();
 		boolean isAadharValid = aadhar.matches("[0-9]{12}");
@@ -48,7 +51,8 @@ public class LoanImpl {
 
 	}
 
-	boolean isPANValid() {
+	@Override
+	public boolean isPANValid() {
 		System.out.println("Enter your PAN number : ");
 		String pan = sc.next();
 		boolean isPanValid = pan.matches("[A-Z]{5}[0-9]{4}[A-Z]");
@@ -56,26 +60,38 @@ public class LoanImpl {
 
 	}
 
-	double getCustomerSalary() {
+	@Override
+	public double getCustomerSalary() {
 		System.out.println("Enter your salary : ");
 		double salary = sc.nextDouble();
 		return salary;
 	}
 
-	int getCibiScore() {
+	@Override
+	public int getCibiScore() {
 		System.out.println("Enter your Cibil Score : ");
 		int cibil = sc.nextInt();
 		return cibil;
 
 	}
 
-	int ageInfo() {
+	@Override
+	public int ageInfo() {
 		System.out.println("Enter your age  : ");
 		int age = sc.nextInt();
 		return age;
 	}
 
-	double getROI() {
+	public static void method2() {
+		System.out.println("Helo static from LOAN IMPL");
+	}
+
+	private void method1() {
+		System.out.println("Hello Loan IMPL");
+	}
+
+	@Override
+	public double getROI() {
 		return 9.5;
 	}
 

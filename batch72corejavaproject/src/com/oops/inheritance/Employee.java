@@ -4,12 +4,12 @@ public class Employee implements Cloneable {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		System.out.println("main method started ");
-		
+
 		String name = "Srikanth";
 		Integer age = 22;
-		
-		System.out.println(name.getClass());//class java.lang.String
-		System.out.println(age.getClass());//class java.lang.Integer
+
+		System.out.println(name.getClass());// class java.lang.String
+		System.out.println(age.getClass());// class java.lang.Integer
 
 		Employee e1 = new Employee();
 		System.out.println(e1);

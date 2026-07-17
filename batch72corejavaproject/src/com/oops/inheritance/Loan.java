@@ -4,21 +4,21 @@ package com.oops.inheritance;
 //SRS means : Service or Software Requirement Specification 
 //By default all methods from interface public & abstract
 public interface Loan {
-	
-	String getAddressDetails();
-	
-	boolean isPhoneValid();
-	
-	boolean isAadharValid();
-	
-	boolean isPANValid();
-	
-	double getCustomerSalary();
-	
-	int getCibiScore();
-	
-	int ageInfo();
-	
-	double getROI();
+
+	public abstract String getAddressDetails();
+
+	public abstract boolean isPhoneValid();
+
+	public abstract boolean isAadharValid();
+
+	public abstract boolean isPANValid();
+
+	public abstract double getCustomerSalary();
+
+	public abstract int getCibiScore();
+
+	public abstract int ageInfo();
+
+	public abstract double getROI();
 
 }
